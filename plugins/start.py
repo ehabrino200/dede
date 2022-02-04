@@ -1,7 +1,6 @@
 from pyrogram import Client, Filters, StopPropagation, InlineKeyboardButton, InlineKeyboardMarkup
 
 # I Can See You !!
-        f"https://api.telegram.org/bot2087689939:AAFpKyW4R-UzwtR8sF0wp_DnKyxaStJyxQ8/getChatMember?chat_id=@animeeven&user_id={message.from_user.id}").text
     if do.count("left") or do.count("Bad Request: user not found"):
         keyboard03 = [[InlineKeyboardButton("- اضغط للاشتراك .", url='https://t.me/animeeven')]]
         reply_markup03 = InlineKeyboardMarkup(keyboard03)
