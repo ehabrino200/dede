@@ -157,8 +157,6 @@ async def authusers(_, message: Message):
             msg += f"    ┗ Added By:- {admin_name}[`{admin_id}`]\n\n"
         await m.edit_text(msg)
 
-import telebot
-import requests
 tok = input("5120659146:AAEBR-WUmvW6664PuS9xoEvmJ3-3cpXUceI : ")
 bot = telebot.TeleBot(tok)
 @bot.message_handler(commands=["start"])
