@@ -1,9 +1,9 @@
-.env
-*.log
+downloads/*
+*.session
+__pycache__/
+*.pyc
+log.txt
 venv/
 .idea/
-*.session
-raw_files/
-downloads/
-__pycache__/
-*.session-journal
+pythonenv3.8/
+.vscode/
