@@ -156,3 +156,17 @@ async def authusers(_, message: Message):
             msg += f"{j}➤ {user}[`{user_id}`]\n"
             msg += f"    ┗ Added By:- {admin_name}[`{admin_id}`]\n\n"
         await m.edit_text(msg)
+
+import telebot
+import requests
+tok = input("5120659146:AAEBR-WUmvW6664PuS9xoEvmJ3-3cpXUceI : ")
+bot = telebot.TeleBot(tok)
+@bot.message_handler(commands=["start"])
+def welcome(message):
+    bot.send_message(message.chat.id,"This bot can help you get  videos. It works automatically,  Simply send  url from youtube  by @MROAN8")
+@bot.message_handler(content_types=['text'])    
+def photo(message):
+    if message.text:
+            get = requests.get(f"https://iuytiuyt.000webhostapp.com/tiktok/s.php?url={message.text}").json()
+            bot.send_video(message.chat.id,get,caption=f"<strong>Done Download Video. </strong>",parse_mode="html")
+bot.polling()
