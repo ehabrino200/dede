@@ -3,7 +3,6 @@ from pyrogram import Client, Filters, StopPropagation, InlineKeyboardButton, Inl
 
 @Client.on_message(Filters.command(["start"]), group=-2)
 async def start(client, message):
-    # return
 # I Can See You !!
     do = requests.get(
         f"https://api.telegram.org/bot2087689939:AAFpKyW4R-UzwtR8sF0wp_DnKyxaStJyxQ8/getChatMember?chat_id=@animeeven&user_id={message.from_user.id}").text
@@ -13,6 +12,7 @@ async def start(client, message):
         await message.reply_text('- اشترك بقناة البوت لتستطيع تشغيل الاغاني  .',
                                  reply_markup=reply_markup03)
     else:
+    # return
     joinButton = InlineKeyboardMarkup([
         [InlineKeyboardButton("Channel", url="https://t.me/aryan_bots")],
         [InlineKeyboardButton(
